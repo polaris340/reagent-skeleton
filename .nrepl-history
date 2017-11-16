@@ -1,0 +1,12 @@
+()
+(+ 1 2)
+(start-repl)
+cljs/quit
+(start-repl)
+(js/alert "Hello, ClojureScript")
+(start-repl)
+(require '[reagent.core :as r :refer [render]])
+(defn comment-box []
+             [:div "Hello, world! I'm a comment-box"])
+#'cljs.user/comment-box
+(render [comment-box] (.getElementById js/document "app"))
